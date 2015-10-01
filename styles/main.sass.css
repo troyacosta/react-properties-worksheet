@@ -1,0 +1,72 @@
+body {
+  font-family: Helvetica, sans-serif; }
+
+.row {
+  overflow: hidden; }
+
+.product {
+  width: 190px;
+  height: 265px;
+  float: left;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin-right: 20px; }
+  .product img {
+    width: 100%; }
+
+.card {
+  border-radius: 2px;
+  border: 1px solid #eee;
+  margin: 20px;
+  padding: 16px; }
+  .card > header {
+    overflow: hidden; }
+    .card > header > img {
+      height: 40px;
+      display: block;
+      float: left; }
+    .card > header > div {
+      float: left;
+      margin-left: 8px; }
+      .card > header > div a {
+        color: #3b5998;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: bold; }
+    .card > header .time {
+      float: left;
+      margin-right: 4px;
+      color: #9197a3;
+      font-size: 13px;
+      line-height: 18px; }
+    .card > header .location {
+      float: left;
+      color: #9197a3;
+      font-size: 13px;
+      line-height: 18px; }
+  .card p {
+    color: #141823; }
+
+.date {
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  margin-bottom: 20px; }
+  .date header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #EF8D24;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 0;
+    font-size: 18px; }
+  .date h1 {
+    margin: 0; }
+  .date h2 {
+    color: #EF8D24;
+    font-size: 16px;
+    margin: 0; }
