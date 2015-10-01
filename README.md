@@ -1,4 +1,4 @@
-# React Mapping Exercises
+# React Properties Worksheet
 
 ## Description
 Update the components to be configurable using properties.
@@ -28,7 +28,7 @@ After completing this assignment, you be able to effectively use
 
 
 ## Normal Mode
-Fork and clone this repository. Follow the instructions in `scripts/components/AppComponent.js`.
+Fork and clone this repository. Follow the instructions in [scripts/components/AppComponent.js](scripts/components/AppComponent.js).
 
 ## Notes
 
