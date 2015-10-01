@@ -5,7 +5,7 @@ var DateComponent = require('./DateComponent');
 
 /*
  * INSTRUCTIONS
- * 1. Customize each one of the pricing boxes to have a different image, brand,
+ * 1. Customize each one of the product boxes to have a different image, brand,
  *    product name and price. Only change the contents of this file.
  * 2. Customize each one of the cards to show a different image, poster, time, 
  *    location and message. Only change the contents of the CardComponent.js 
@@ -20,10 +20,30 @@ module.exports = React.createClass({
 		return (
 			<div>
 				<div className="row">
-					<ProductBoxComponent />
-					<ProductBoxComponent />
-					<ProductBoxComponent />
-					<ProductBoxComponent />
+					<ProductBoxComponent 
+					image="http://www.allkidsgolfclubs.com/images/product-images/tartansports/Precise%20XR9%20Ages%209-12.jpg"
+					brand="Ping"
+					name="Golf CLubs"
+					price= "$400"
+					/>
+					<ProductBoxComponent 
+					image="http://dri1.img.digitalrivercontent.net/Storefront/Company/msintl/images/English/en-INTL-XboxOne-Himalaya-Console-Bundle-KG4-00051/en-INTL-L-XboxOne-Himalaya-Console-Bundle-KG4-00051-mnco.jpg"
+					brand="Microsoft"
+					name="Xbox One"
+					price= "$400"
+					/>
+					<ProductBoxComponent 
+					image="http://netgadgets.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/r/h/rh42-7-1500.jpg"
+					brand="Tyco"
+					name="Helicopter"
+					price= "$250"
+					/>
+					<ProductBoxComponent 
+					image="http://img.gawkerassets.com/img/17bdfbe5kgto7jpg/original.jpg"
+					brand="Evil"
+					name="Killer Shark"
+					price= "$1,000,000"
+					/>
 				</div>
 				<div className="row">
 					<CardComponent
@@ -46,10 +66,26 @@ module.exports = React.createClass({
 						message="Vote for my boss sister to help her win the Alpine Club Photo contest for this photo of the beautiful New Mexico countryside!"/>
 				</div>
 				<div className="row">
-					<DateComponent />
-					<DateComponent />
-					<DateComponent />
-					<DateComponent />
+					<DateComponent 
+						month= "june"
+						date= "10"
+						day= "monday"
+					/>
+					<DateComponent 
+						month= "july"
+						date= "15"
+						day= "friday"						
+					/>
+					<DateComponent 
+						month= "june"
+						date= "2"
+						day= "wednesday"
+					/>
+					<DateComponent 
+						month= "june"
+						date= "6"
+						day= "sunday"
+					/>
 				</div>
 			</div>
 		);

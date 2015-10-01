@@ -19878,7 +19878,7 @@ var DateComponent = require('./DateComponent');
 
 /*
  * INSTRUCTIONS
- * 1. Customize each one of the pricing boxes to have a different image, brand,
+ * 1. Customize each one of the product boxes to have a different image, brand,
  *    product name and price. Only change the contents of this file.
  * 2. Customize each one of the cards to show a different image, poster, time, 
  *    location and message. Only change the contents of the CardComponent.js 
@@ -19898,10 +19898,30 @@ module.exports = React.createClass({
 			React.createElement(
 				'div',
 				{ className: 'row' },
-				React.createElement(ProductBoxComponent, null),
-				React.createElement(ProductBoxComponent, null),
-				React.createElement(ProductBoxComponent, null),
-				React.createElement(ProductBoxComponent, null)
+				React.createElement(ProductBoxComponent, {
+					image: 'http://www.allkidsgolfclubs.com/images/product-images/tartansports/Precise%20XR9%20Ages%209-12.jpg',
+					brand: 'Ping',
+					name: 'Golf CLubs',
+					price: '$400'
+				}),
+				React.createElement(ProductBoxComponent, {
+					image: 'http://dri1.img.digitalrivercontent.net/Storefront/Company/msintl/images/English/en-INTL-XboxOne-Himalaya-Console-Bundle-KG4-00051/en-INTL-L-XboxOne-Himalaya-Console-Bundle-KG4-00051-mnco.jpg',
+					brand: 'Microsoft',
+					name: 'Xbox One',
+					price: '$400'
+				}),
+				React.createElement(ProductBoxComponent, {
+					image: 'http://netgadgets.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/r/h/rh42-7-1500.jpg',
+					brand: 'Tyco',
+					name: 'Helicopter',
+					price: '$250'
+				}),
+				React.createElement(ProductBoxComponent, {
+					image: 'http://img.gawkerassets.com/img/17bdfbe5kgto7jpg/original.jpg',
+					brand: 'Evil',
+					name: 'Killer Shark',
+					price: '$1,000,000'
+				})
 			),
 			React.createElement(
 				'div',
@@ -19928,10 +19948,26 @@ module.exports = React.createClass({
 			React.createElement(
 				'div',
 				{ className: 'row' },
-				React.createElement(DateComponent, null),
-				React.createElement(DateComponent, null),
-				React.createElement(DateComponent, null),
-				React.createElement(DateComponent, null)
+				React.createElement(DateComponent, {
+					month: 'june',
+					date: '10',
+					day: 'monday'
+				}),
+				React.createElement(DateComponent, {
+					month: 'july',
+					date: '15',
+					day: 'friday'
+				}),
+				React.createElement(DateComponent, {
+					month: 'june',
+					date: '2',
+					day: 'wednesday'
+				}),
+				React.createElement(DateComponent, {
+					month: 'june',
+					date: '6',
+					day: 'sunday'
+				})
 			)
 		);
 	}
@@ -19952,14 +19988,14 @@ module.exports = React.createClass({
 			React.createElement(
 				"header",
 				null,
-				React.createElement("img", { src: "http://blogdailyherald.com/wp-content/uploads/2014/10/wallpaper-for-facebook-profile-photo.jpg" }),
+				React.createElement("img", { src: this.props.image }),
 				React.createElement(
 					"div",
 					null,
 					React.createElement(
 						"a",
 						{ href: "#", className: "name" },
-						"Tracy Lawrence"
+						this.props.name
 					),
 					React.createElement(
 						"div",
@@ -19967,12 +20003,12 @@ module.exports = React.createClass({
 						React.createElement(
 							"div",
 							{ className: "time" },
-							"23 mins"
+							this.props.time
 						),
 						React.createElement(
 							"div",
 							{ className: "location" },
-							"Milwaukee, WI"
+							this.props.location
 						)
 					)
 				)
@@ -19982,7 +20018,7 @@ module.exports = React.createClass({
 				null,
 				"Concerned Mother Quote of the Day:",
 				React.createElement("br", null),
-				"\"Well I'm glad you're having fun with all those dogs of yours, whether it be chasing them around the park or trying to sell them on the internet\""
+				this.props.message
 			)
 		);
 	}
@@ -20003,17 +20039,17 @@ module.exports = React.createClass({
 			React.createElement(
 				"header",
 				null,
-				"September"
+				this.props.month
 			),
 			React.createElement(
 				"h1",
 				null,
-				"23"
+				this.props.date
 			),
 			React.createElement(
 				"h2",
 				null,
-				"Saturday"
+				this.props.day
 			)
 		);
 	}
